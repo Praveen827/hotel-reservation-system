@@ -1,0 +1,5 @@
+@EndUserText.label: 'hotel service'
+define service ZSB_hotelres {
+  expose ZCHOTEL_RES;
+  expose ZCHOTEL_ITEM;
+}

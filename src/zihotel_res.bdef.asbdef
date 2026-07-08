@@ -1,0 +1,27 @@
+managed implementation in class zbp_ihotel_res unique;
+strict ( 2 );
+
+define behavior for ZIhotel_res //alias <alias_name>
+persistent table zhotel_res
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+
+  association _item { create; }
+}
+
+define behavior for ZIHOTEL_ITEM //alias <alias_name>
+persistent table zhotel_item
+lock dependent by _resid
+authorization dependent by _resid
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly: update ) Serviceid,Reservationid;
+  association _resid;
+}

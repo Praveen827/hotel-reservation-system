@@ -1,0 +1,40 @@
+@Metadata.layer: #CORE
+annotate entity ZCHOTEL_ITEM
+with
+{
+
+  @UI.facet: [
+    {
+      id: 'ItemDetails',
+      purpose: #STANDARD,
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'Service Details',
+      position: 10
+    }
+  ]
+
+  @UI.lineItem: [{ position: 10 }]
+  @UI.identification: [{ position: 10, label: 'Service ID'  }]
+  Serviceid;
+
+  @UI.lineItem: [{ position: 20 }]
+  @UI.identification: [{ position:  20, label: 'Reservation ID' }]
+  Reservationid;
+
+  @UI.lineItem: [{ position: 30 }]
+  @UI.identification: [{ position:  30, label: 'Service Type' }]
+  Servicetype;
+
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{ position:  40, label: 'Quantity' }]
+  Quantity;
+
+  @UI.lineItem: [{ position: 50 }]
+  @UI.identification: [{ position:  50, label: 'Currency'  }]
+  Currencycode;
+
+  @UI.lineItem: [{ position: 60 }]
+  @UI.identification: [{ position: 60, label: 'Amount' }]
+  Amount;
+
+}
